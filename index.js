@@ -1,14 +1,17 @@
+const PORT = process.env.PORT || 4000;
 var express = require('express');
-var socket = require('socket.io');
-
 var app = express();
 
-const PORT = process.env.PORT || 4000;
-var server = app.listen(PORT,function(){
-    console.log("Listen in port 4000");
-});
+var socket = require('socket.io');
+
+var http = require('http');
+var server = http.Server(app);
 
 app.use(express.static('public'));
+
+server.listen(PORT,function(){
+    console.log("Chat is running");
+});
 
 var io = socket(server);
 
