@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-witdh, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles.css">
+        <title>Generic Web Chat</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.0/socket.io.min.js"></script>
+    </head>
+    <body>
+        <div id="chat">
+            <div id ="chat-windows">
+                <div id="output">
+                    <p class="message"><strong>Name: </strong>Mensaje</p>
+                    <p class="message me"><strong>Name: </strong>Mensaje</p>
+                </div>
+                <div id="feedback"></div>
+            </div>
+            <input id="handle" type="text" placeholder="Your name">
+            <input id="message" type="text" placeholder="Message...">
+            <button id="send">Send</button>
+        </div>
+        <script src="/chat.js"></script>
+    </body>
+</html>
