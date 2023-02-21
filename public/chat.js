@@ -1,4 +1,4 @@
-var socket = io.connect(url_page);
+var socket = io.connect("https://railway-web-chat-production.up.railway.app:4000");
 
 var message = document.getElementById('message');
 var handle = document.getElementById('handle');
